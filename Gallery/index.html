@@ -17,11 +17,15 @@
 
 <body>
     <div class="container">
-        <div id="fetchedImages" class="carousel slide" data-bs-ride="carousel">
+        <div id="fetchedImages" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#fetchedImages" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#fetchedImages" data-bs-slide-to="0" class="active d-none"></button>
             </div>
             <div class="carousel-inner">
+                <div class="d-flex justify-content-center">
+                    <div class="spinner-border text-light" style="height: 4rem; width: 4rem;" role="status">
+                    </div>
+                </div>
                 <div class="carousel-item">
                     <img src="" class="d-block" alt="...">
                 </div>

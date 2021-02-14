@@ -17,6 +17,7 @@ function load_Images() {
         .then(function (imgArray) {
             let output = "";
             let buttonCount = '';
+
             imgArray.forEach((img,index) => {
                 output += `
                     <div class="carousel-item">
@@ -27,10 +28,12 @@ function load_Images() {
                 <button type="button" data-bs-target="#fetchedImages" data-bs-slide-to="${index}"></button>
                 `
             })
-            carousel.innerHTML = output;
-            carouselIndicators.innerHTML = buttonCount;
-            
-            document.querySelector('.carousel-item').classList.add('active');
-            document.querySelector('button').classList.add('active');
+            setTimeout(function () {
+                carousel.innerHTML = output;
+                carouselIndicators.innerHTML = buttonCount;
+    
+                document.querySelector('.carousel-item').classList.add('active');
+                document.querySelector('button').classList.add('active');
+            }, 2000)
         })
 }
